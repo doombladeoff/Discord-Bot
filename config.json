@@ -1,0 +1,9 @@
+{
+    "TOKEN": "<YOUR TOKEN>",
+    "clientID": "<YOUR clientID>",
+    "SpotifyID": {
+        "client_id": "<YOUR SpotifyID.client_id>",
+        "clieny_secretId": "<YOUR SpotifySecret.client_secret",
+        "spotify_token": "<YOUR SpotifyToken"
+    }
+}
