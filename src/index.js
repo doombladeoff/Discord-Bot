@@ -1,4 +1,4 @@
-const { Client, Collection, PermissionsBitField, GatewayIntentBits, EmbedBuilder, Partials} = require('discord.js');
+const { Client, Collection, GatewayIntentBits, Partials} = require('discord.js');
 
 const { TOKEN } = require('../../config.json')
 const client = new Client({
@@ -31,7 +31,7 @@ const client = new Client({
     Partials.ThreadMember
   ]
 });
-const fs = require('fs');
+
 module.exports = client;
 const discordModals = require('discord-modals');
 discordModals(client);
@@ -49,21 +49,5 @@ client.slashcommand = new Collection();
       console.log(`Error Found In Handler Called ${Handler}\n${e}`)
   }
 })
-// client.on("ready", async (member) => {
-
-//   console.log("[ READY ]");
-// })
-
-// client.on("interactionCreate", async (interaction) => {
-//   if (!interaction.isChatInputCommand()) return;
-//   const _slashcommand = client.slashcommand.get(interaction.commandName)
-//   if (!_slashcommand) return;
-
-//   try {
-//     await _slashcommand.run(client, interaction);
-//   } catch (e) {
-//     console.error(e);
-//   }
-// })
 
 client.login(TOKEN);
